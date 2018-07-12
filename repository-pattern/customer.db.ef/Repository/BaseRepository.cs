@@ -25,8 +25,8 @@ namespace customer.db.ef.Repository
 
         public void Dispose()
         {
-            Dispose(false);
-            GC.SuppressFinalize(true);
+            Dispose(true);
+            GC.SuppressFinalize(this);
         }
 
         public abstract void Add(T entity);
